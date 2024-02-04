@@ -2,3 +2,54 @@
   margin: 0;
   padding: 0;
 }
+
+/* utility class {
+  button: #067bc2;
+  background: #A7BED3
+  buttonBox: #F19A3E
+  extra: #2D4654
+} */
+
+body {
+  background-color: #a7bed3;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container {
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+@media only screen and (max-width: 820px) {
+  .container {
+    width: 35vw;
+    height: 50vh;
+    gap: 2px;
+  }
+}
+.btn {
+  width: 32%;
+  height: 32%;
+  border-radius: 9px;
+  border: none;
+  background-color: #f19a3e;
+  color: #2d4654;
+  font-size: 3rem;
+}
+
+.hide {
+  display: none;
+}
