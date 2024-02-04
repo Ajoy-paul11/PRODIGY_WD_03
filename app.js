@@ -1,6 +1,8 @@
 let boxes = document.querySelectorAll('.btn');
 let msg = document.querySelector('.win-msg')
 let hide = document.querySelector('.hide')
+let reSet = document.querySelector('.button-Reset')
+let newGame = document.querySelector('.button-Newgame')
 
 let playerX = true;
 let winningPattern = [[0, 1, 2], [0, 3, 6], [0, 4, 8], [1, 4, 7], [2, 5, 8], [2, 4, 6], [3, 4, 5], [6, 7, 8]];
@@ -21,10 +23,31 @@ boxes.forEach((box) => {
     })
 })
 
+const resetGame = () => {
+    enabledboxes()
+
+}
+const anotherGame = () => {
+    enabledboxes()
+    hide.style.display = 'none'
+}
+const enabledboxes = () => {
+    for (let box of boxes) {
+        box.disabled = false;
+        box.innerText = ""
+        box.classList.remove("hide")
+    }
+    reSet.classList.remove('hide')
+    hide.classList.remove('m-top')
+
+}
 const disabledboxes = () => {
     for (let box of boxes) {
         box.disabled = true;
+        box.classList.add("hide")
     }
+    hide.classList.add('m-top')
+
 }
 
 const callWinner = (winner) => {
@@ -44,7 +67,11 @@ const checkWinner = () => {
                 console.log("Winner");
                 disabledboxes()
                 callWinner(pos1val)
+                reSet.classList.add('hide')
             }
         }
     }
 }
+
+reSet.addEventListener('click', resetGame)
+newGame.addEventListener('click', anotherGame)

@@ -22,6 +22,7 @@ main {
   align-items: center;
   flex-direction: column;
   gap: 12px;
+  font-family: "Segoe UI";
 }
 
 .container {
@@ -47,9 +48,82 @@ main {
   border: none;
   background-color: #f19a3e;
   color: #2d4654;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .hide {
   display: none;
+}
+
+.m-top {
+  margin-top: 10rem;
+}
+
+.win-msg {
+  text-align: center;
+  font-size: 2rem;
+  margin: 9px auto;
+}
+
+.button-Reset,
+.button-Newgame {
+  cursor: pointer;
+  background-color: #067bc2;
+  border: none;
+  border-radius: 23px;
+  color: #fefefe;
+  padding: 17px 23px;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 390px) {
+  main {
+    width: 100vw;
+    height: 65vh;
+  }
+  .container {
+    width: 75vw;
+    height: 36vh;
+    gap: 4px;
+  }
+  .button-Reset {
+    padding: 10px 17px;
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 1000px) {
+  main {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container {
+    width: 40vw;
+    height: 60vh;
+  }
+  .btn {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 650px) {
+  main {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container {
+    width: 70vw;
+    height: 60vh;
+    gap: 5px;
+  }
+  .button-Reset {
+    padding: 13px 19px;
+    font-size: 19px;
+  }
+  .btn {
+    font-size: 3rem;
+  }
 }
